@@ -1,4 +1,6 @@
 class LaunchesController < ApplicationController
+    include SpacecoastlaunchesScraper
+    
     def index
         launches = Launch.all
         render json: launches
