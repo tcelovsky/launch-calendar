@@ -15,12 +15,12 @@ class SpacecoastlaunchesScraper
     def create_launches_list
         launches = []
 
-        self.scrape.each do |posts|
-            date = posts.children.children.children[2].text
-            rocket = posts.children.children.children[4].text
-            mission = posts.children.children.children[6].text
-            site = posts.children.children.children[8].text
-            time = posts.children.children.children[10].text.strip
+        self.scrape.each do |launch_posts|
+            date = launch_posts.children.children.children[2].text
+            rocket = launch_posts.children.children.children[4].text
+            mission = launch_posts.children.children.children[6].text
+            site = launch_posts.children.children.children[8].text
+            time = launch_posts.children.children.children[10].text.strip
             
             launch_info = {
                 date: date,
@@ -30,29 +30,10 @@ class SpacecoastlaunchesScraper
                 time: time
             }
 
-            launches.push(launch_info)
+            launches << launch_info
         end
         launches
     end
-
-    # def make_launches
-    #     self.scrape.each do |posts|
-    #         # date = posts.children.children.children[2].text
-    #         # rocket = posts.children.children.children[4].text
-    #         # mission = posts.children.children.children[6].text
-    #         # site = posts.children.children.children[8].text
-    #         # time = posts.children.children.children[10].text.strip
-    #         # launch = Launch.create(date: date, rocket: rocket, mission: mission, site: site, time: time)
-    #         launch = Launch.new
-    #         launch.date = posts.children.children.children[2].text
-    #         launch.rocket = posts.children.children.children[4].text
-    #         launch.mission = posts.children.children.children[6].text
-    #         launch.site = posts.children.children.children[8].text
-    #         launch.time = posts.children.children.children[10].text.strip
-    #         launch.save
-    #     end
-    # end
-
 end
 # ruby app/controllers/concerns/spacecoastlaunches_scraper.rb
 # SpacecoastlaunchesScraper.new.make_launches
