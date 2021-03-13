@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Launch.destroy_all
+
+scrape = SpacecoastlaunchesScraper.new
+launches = scrape.create_launches_list
+Launch.create_from_collection(launches)
