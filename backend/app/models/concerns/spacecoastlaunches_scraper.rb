@@ -12,7 +12,6 @@ class SpacecoastlaunchesScraper
 
     def scrape
         doc = self.get_page.css(".et_pb_text_1").css(".et_column_last")
-        # binding.pry
     end
 
     def create_launches_list
@@ -36,7 +35,6 @@ class SpacecoastlaunchesScraper
             launches << launch_info
         end
         launches
-        # binding.pry
     end
 end
 
