@@ -2,26 +2,29 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 
+URL = 'https://spacecoastlaunches.com/launch-list/'
+
 class SpacecoastlaunchesScraper
 
     def get_page
-        Nokogiri::HTML(open("https://spacecoastlaunches.com/launch-list/"))
+        Nokogiri::HTML(open(URL))
     end
 
     def scrape
-        self.get_page.css(".et_pb_text_1")
+        doc = self.get_page.css(".et_pb_text_1").css(".et_column_last")
+        # binding.pry
     end
 
     def create_launches_list
         launches = []
 
-        self.scrape.each do |launch_posts|
-            date = launch_posts.children.children.children[2].text
-            rocket = launch_posts.children.children.children[4].text
-            mission = launch_posts.children.children.children[6].text
-            site = launch_posts.children.children.children[8].text
-            time = launch_posts.children.children.children[10].text.strip
-            
+        self.scrape.each do |launch|
+            date = launch.css("p")[0].children[1].text.strip
+            rocket = launch.css("p")[1].children[1].text.strip
+            mission = launch.css("p")[2].children[1].text.strip
+            site = launch.css("p")[3].children[1].text.strip
+            time = launch.css("p")[4].children[1].text.strip
+
             launch_info = {
                 date: date,
                 rocket: rocket,
@@ -33,7 +36,11 @@ class SpacecoastlaunchesScraper
             launches << launch_info
         end
         launches
+        # binding.pry
     end
 end
-# ruby app/controllers/concerns/spacecoastlaunches_scraper.rb
-# SpacecoastlaunchesScraper.new.make_launches
+
+SpacecoastlaunchesScraper.new.create_launches_list
+# ruby app/models/concerns/spacecoastlaunches_scraper.rb
+    # Shift+Q to quit
+    # exit! to exit
