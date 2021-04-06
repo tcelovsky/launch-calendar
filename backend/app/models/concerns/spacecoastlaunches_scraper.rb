@@ -11,7 +11,7 @@ class SpacecoastlaunchesScraper
     end
 
     def scrape
-        doc = self.get_page.css(".et_pb_text_1").css(".et_column_last")
+        doc ||= self.get_page.css(".et_pb_text_1").css(".et_column_last")
     end
 
     def create_launches_list
