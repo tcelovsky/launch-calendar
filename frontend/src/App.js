@@ -3,7 +3,7 @@ import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class  App extends Component {
+class App extends Component {
 
   componentDidMount() {
     // console.log(this.props)
