@@ -1,4 +1,5 @@
 class LaunchesController < ApplicationController
+    before_action :find_launch, only: [:show, :update, :destroy]
     
     def index
         launches = Launch.all
@@ -6,7 +7,6 @@ class LaunchesController < ApplicationController
     end
 
     def show
-        launch = Launch.find(params[:id])
         render json: launch
     end
 
@@ -16,18 +16,20 @@ class LaunchesController < ApplicationController
     end
 
     def update
-        launch = Launch.find(params[:id])
         launch = launch.update(launch_params)
         render json: launch
     end
 
     def destroy
-        launch = List.find(params[:id])
         launch.destroy
     end
 
     private
     def launch_params
         params.require(:lauch).permit(:date, :time, :rocket, :site, :mission)
+    end
+
+    def find_launch
+        launch = List.find(params[:id])
     end
 end
