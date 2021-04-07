@@ -1,7 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-function App() {
+class  App extends Component {
+
+  componentDidMount() {
+    // console.log(this.props)
+    this.props.fetchLaunches()
+  }
+
   return (
     <div className="App">
       <header className="App-header">
