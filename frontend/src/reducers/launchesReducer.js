@@ -5,7 +5,7 @@ const launchesReducer = (state = {
     switch(action.type) {
         case 'LOADING_LAUNCHES':
             return {
-                ...state, launches: [...state.launches], loading:true
+                ...state, launches: [...state.launches], loading: true
             }
         case 'ADD_LAUNCHES':
             return {

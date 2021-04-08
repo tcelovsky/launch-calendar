@@ -7,8 +7,8 @@ import { fetchLaunches } from './actions/launchActions';
 class App extends Component {
 
   componentDidMount() {
-    // console.log(this.props)
     this.props.fetchLaunches()
+    console.log(this.props)
   }
   
   render() {
