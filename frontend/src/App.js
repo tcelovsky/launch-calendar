@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchLaunches } from './actions/launchActions';
 
 class App extends Component {
 
@@ -32,4 +33,17 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    launches: state.launches,
+    loading: state.loading
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchLaunches: () => dispatch(fetchLaunches())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
