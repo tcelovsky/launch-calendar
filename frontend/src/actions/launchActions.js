@@ -4,9 +4,13 @@ const LAUNCHES_URL = `${BASE_URL}/launches`
 export const fetchLaunches = () => {
     return (dispatch) => {
       dispatch({ type: 'LOADING_LAUNCHES'})
-      fetch(LAUNCHES_URL).then(response => {
-        console.log(response)
-      })
+      fetch(LAUNCHES_URL)
+        .then(response => {
+          return response.json()
+        })
+        .then(responseJSON => {
+          console.log(responseJSON)
+        })
     }
   }
 
