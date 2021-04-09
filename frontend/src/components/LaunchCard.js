@@ -3,11 +3,15 @@ import CardFront from './CardFront';
 import CardBack from './CardBack';
 
 class LaunchCard extends Component {
+
+    generateLaunchCards = () => {
+        return console.log(this.props) 
+    }
     
     render() {
         return (
             <div className="launch-card">
-                {console.log(this.props)}
+                {this.generateLaunchCards()}
                 <CardFront />
                 <CardBack />
             </div>
