@@ -4,8 +4,8 @@ class CardBack extends Component {
 
     render() {
         return (
-            <div className='card-back'>
-                {console.log(this.props)}
+            <div className="card-back">
+                <p>{this.props.mission}</p>
             </div>
         )
     }
