@@ -2,8 +2,9 @@ import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchLaunches } from './actions/launchActions';
-import LaunchList from './containers/LaunchList';
-import LaunchCard from './components/LaunchCard';
+// import LaunchList from './containers/LaunchList';
+// import LaunchCard from './components/LaunchCard';
+import Launches from './components/Launches';
 
 class App extends Component {
 
@@ -16,8 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">Rocket Launch Calendar</header>
-        <LaunchCard launches={this.props.launches} />
-        {/* <LaunchList launches={this.props.launches} /> */}
+        <Launches launches={this.props.launches} />
       </div>
     );
   }
