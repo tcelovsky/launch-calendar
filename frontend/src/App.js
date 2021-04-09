@@ -2,18 +2,20 @@ import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchLaunches } from './actions/launchActions';
+import LaunchList from './containers/launchList';
 
 class App extends Component {
 
   componentDidMount() {
     this.props.fetchLaunches()
-    console.log(this.props)
+    // console.log(this.props)
   }
   
   render() {
     return (
       <div className="App">
         <header className="App-header">Launch Calendar</header>
+        <LaunchList launches={this.props.launches} />
       </div>
     );
   }
