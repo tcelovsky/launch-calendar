@@ -6,10 +6,10 @@ class CardFront extends Component {
         return (
             <div className="card-front">
                 <ul>
-                    <li>{this.props.date}</li>
-                    <li>{this.props.time}</li>
-                    <li>{this.props.site}</li>
-                    <li>{this.props.rocket}</li>
+                    <li>Date: {this.props.date}</li>
+                    <li>Time: {this.props.time}</li>
+                    <li>Site: {this.props.site}</li>
+                    <li>Rocket: {this.props.rocket}</li>
                 </ul>
             </div>
         )
