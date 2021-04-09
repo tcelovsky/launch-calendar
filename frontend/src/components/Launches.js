@@ -4,7 +4,7 @@ import LaunchCard from './LaunchCard';
 class Launches extends Component {
 
     generateLaunchCards = () => {
-        return this.props.launches.map(launch => <LaunchCard key={launch.id} card={launch} />)
+        return this.props.launches.map(launch => <LaunchCard key={launch.id} launch={launch} />)
     }
 
     render() {
