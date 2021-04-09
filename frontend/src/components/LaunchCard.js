@@ -5,13 +5,13 @@ import CardBack from './CardBack';
 class LaunchCard extends Component {
 
     generateLaunchCards = () => {
-        return console.log(this.props) 
+        return this.props.launches.map(launch => launch={launch})
     }
     
     render() {
         return (
             <div className="launch-card">
-                {this.generateLaunchCards()}
+                {console.log(this.generateLaunchCards())}
                 <CardFront />
                 <CardBack />
             </div>
