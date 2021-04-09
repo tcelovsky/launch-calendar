@@ -15,25 +15,19 @@ header {
 }
 
 #launch-cards {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 850px;
-  height: 850px; */
+  margin: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   column-gap: 10px;
   row-gap: 15px;
-  place-content: start;
+  place-content: center;
   grid-auto-flow: row;
 }
 
 .launch-card {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   margin: 5px;
   transition: transform 1s;
   transform-style: preserve-3d;
@@ -92,14 +86,12 @@ p {
 
 @media only screen and (min-width: 500px) {
   #launch-cards {
-    width: 500px;
-    height: 500px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (min-width: 850px) {
   #launch-cards {
-    width: 850px;
-    height: 850px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
