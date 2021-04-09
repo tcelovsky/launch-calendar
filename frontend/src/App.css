@@ -14,8 +14,12 @@ header {
   text-align: center;
 }
 
+h1 {
+  text-shadow: 2px 2px #eeeeeeea;
+}
+
 #launch-cards {
-  margin: 0 20px;
+  margin: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
