@@ -5,7 +5,7 @@ class CardBack extends Component {
     render() {
         return (
             <div className="card-back">
-                <p>{this.props.mission}</p>
+                <p>Mission: {this.props.mission}</p>
             </div>
         )
     }
