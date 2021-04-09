@@ -3,9 +3,15 @@ import LaunchCard from './LaunchCard';
 
 class Launches extends Component {
 
+    generateLaunchCards = () => {
+        return this.props.launches.map(launch => launch={launch})
+    }
+
     render() {
         return (
-            console.log(this.props)
+            <div className='launches-list'>
+                {console.log(this.generateLaunchCards())}
+            </div>
         )
     }
 }
