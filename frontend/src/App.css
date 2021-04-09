@@ -19,7 +19,8 @@ header {
 }
 
 h1 {
-  text-shadow: 2px 2px #eeeeeeea;
+  text-shadow: 2px 2px #eeeeee;
+  color: #bbbbbb;
 }
 
 #launch-cards {
