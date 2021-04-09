@@ -9,7 +9,6 @@ export const fetchLaunches = () => {
           return response.json()
         })
         .then(responseJSON => {
-          // console.log(responseJSON)
           dispatch({ type: 'ADD_LAUNCHES', launches: responseJSON })
         })
     }
