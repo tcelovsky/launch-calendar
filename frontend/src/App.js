@@ -14,7 +14,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">Rocket Launch Calendar</header>
+        <header className="App-header">
+          <h1>Rocket Launch Calendar</h1>
+        </header>
         <Launches launches={this.props.launches} />
       </div>
     );
