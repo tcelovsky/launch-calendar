@@ -64,8 +64,18 @@ h1 {
 
 ul {
   list-style-type: none;
+  padding: 20px;
   text-align: left;
   font-size: 1em;
+  font-weight: bold;
+}
+
+li span {
+  font-weight: bold;
+}
+
+li {
+  font-weight: normal;
 }
 
 .card-front:hover {
