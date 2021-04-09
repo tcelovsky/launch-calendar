@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import CardFront from './CardFront';
+import CardBack from './CardBack';
 
 class LaunchCard extends Component {
     
@@ -6,6 +8,8 @@ class LaunchCard extends Component {
         return (
             <div className="launch-card">
                 {console.log(this.props)}
+                <CardFront />
+                <CardBack />
             </div>
         )
     }
