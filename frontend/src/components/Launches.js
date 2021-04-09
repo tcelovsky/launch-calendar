@@ -9,7 +9,7 @@ class Launches extends Component {
 
     render() {
         return (
-            <div className='launch-cards'>
+            <div className="launch-cards">
                 {this.generateLaunchCards()}
             </div>
         )
