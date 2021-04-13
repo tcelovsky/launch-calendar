@@ -18,6 +18,26 @@ header {
   text-align: center;
 }
 
+.navbar {
+  position: fixed;
+  top: 10px;
+  width: 175%;
+}
+
+.navbar a {
+  color: #eeeeeeea;
+  text-decoration: none;
+  padding-left: 15px;
+}
+
+.navbar a:hover {
+  font-weight: bold;
+}
+
+.navbar .active {
+  font-weight: bold;
+}
+
 h1 {
   color: #eeeeeeea;
 }
