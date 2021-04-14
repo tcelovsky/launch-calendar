@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddToCalendarButton from './AddToCalendarButton';
 
 class CardFront extends Component {
 
@@ -11,6 +12,13 @@ class CardFront extends Component {
                     <li><span>Site: </span>{this.props.site}</li>
                     <li><span>Rocket: </span>{this.props.rocket}</li>
                 </ul>
+                <AddToCalendarButton 
+                    date={this.props.date}
+                    time={this.props.time}
+                    rocket={this.props.rocket}
+                    site={this.props.site}
+                    mission={this.props.mission}
+                />
             </div>
         )
     }
