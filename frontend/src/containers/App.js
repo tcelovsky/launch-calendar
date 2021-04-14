@@ -17,8 +17,8 @@ class App extends Component {
   render() {
     return (
         <div className="App">
-          <Header />
           <NavBar />
+          <Header />
           <Switch>
             <Route exact path='/' render={routerProps =>
 	            <Launches {...routerProps} launches={this.props.launches}/>} />
