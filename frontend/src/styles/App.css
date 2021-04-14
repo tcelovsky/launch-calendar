@@ -137,6 +137,8 @@ p {
   top: -20px;
 }
 
+.addeventatc {visibility:hidden;}
+
 @media only screen and (min-width: 500px) {
   #launch-cards {
     grid-template-columns: 1fr 1fr;
