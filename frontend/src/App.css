@@ -78,6 +78,7 @@ h1 {
   width: inherit;
   backface-visibility: hidden;
   background-size: cover;
+  color: black;
 }
 
 .card-front {
