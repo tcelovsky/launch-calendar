@@ -11,7 +11,7 @@ class AddToCalendarButton extends Component {
   parseTime = (time) => {
       switch(time) {
             case 'TBD':
-                return '8:00 am'
+                return '8:00 am';
             default:
                 return time;
       }
