@@ -42,6 +42,15 @@ h1 {
   color: #eeeeeeea;
 }
 
+.about {
+  height: 950px;
+}
+
+.about p {
+  color: #eeeeeeea;
+  text-align: center;
+}
+
 #launch-cards {
   margin: 20px;
   display: grid;
