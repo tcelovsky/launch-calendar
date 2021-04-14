@@ -12,6 +12,7 @@ class LaunchCard extends Component {
                 time={this.props.launch.time}
                 site={this.props.launch.site}
                 rocket={this.props.launch.rocket}
+                mission={this.props.launch.mission}
                  />
                 <CardBack mission={this.props.launch.mission}/>
             </div>
