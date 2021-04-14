@@ -6,6 +6,7 @@ import { fetchLaunches } from '../actions/launchActions';
 import Launches from '../components/Launches';
 import NavBar from '../components/NavBar';
 import About from '../components/About';
+import Header from '../components/Header';
 
 class App extends Component {
 
