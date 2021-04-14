@@ -43,3 +43,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_model_serializers'
 gem 'nokogiri'
 gem 'pry'
+
+# Whenever is a Ruby gem that provides a clear syntax for writing and deploying cron jobs.
+gem 'whenever', require: false
