@@ -1,10 +1,10 @@
-import './App.css';
+import '../App.css';
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchLaunches } from './actions/launchActions';
-import Launches from './components/Launches';
-import NavBar from './components/NavBar';
+import { fetchLaunches } from '../actions/launchActions';
+import Launches from '../components/Launches';
+import NavBar from '../components/NavBar';
 
 class App extends Component {
 
