@@ -1,6 +1,6 @@
 import '../styles/App.css';
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchLaunches } from '../actions/launchActions';
 import Launches from '../components/Launches';
@@ -20,11 +20,13 @@ class App extends Component {
             <h1>Launch Calendar</h1>
             <NavBar />
           </header>
-          <Route exact path='/' render={routerProps =>
-	          <Launches {...routerProps} launches={this.props.launches}/>} />
-          <Route path='/launches' render={routerProps =>
-	          <Launches {...routerProps} launches={this.props.launches}/>} />
-          <Route path='/about' component={About} />
+          <Switch>
+            <Route exact path='/' render={routerProps =>
+	            <Launches {...routerProps} launches={this.props.launches}/>} />
+            <Route path='/launches' render={routerProps =>
+	            <Launches {...routerProps} launches={this.props.launches}/>} />
+            <Route path='/about' component={About} />
+          </Switch>
         </div>
     );
   }
