@@ -1,4 +1,4 @@
-.App {
+body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -11,56 +11,66 @@
   background-size: cover;
 }
 
-header {
-  width: 300px;
-  margin: 0 auto;
-  height: 50px;
-  padding: 10px;
-  text-align: center;
-}
-
+/* <!-- NavBar --> */
 .navbar {
+  background: #black;
   position: absolute; 
-  top: 10px; 
-  right: 20px;
+  right: 0px;
+  border: none;
+  top: 0px;
 }
 
-.navbar a {
+.nav-link,
+.navbar-brand {
   color: #eeeeeeea;
-  text-decoration: none;
-  padding-left: 15px;
+  cursor: pointer;
 }
 
-.navbar a:hover {
-  font-weight: bold;
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: #eeeeeeea;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
 }
 
 .navbar .active {
   font-weight: bold;
+  color: #eeeeeeea;
+  text-decoration: none;
+} 
+
+/* <!-- Header --> */
+header {
+  text-align: center;
+}
+
+.page-header {
+  border-bottom: none;
+  margin: 20px 0 0px;
+  padding-bottom: 0px;
 }
 
 h1 {
   color: #eeeeeeea;
 }
 
-.about {
-  height: 964px;
-}
-
-.about p {
-  color: #eeeeeeea;
-  text-align: center;
-}
-
+/* <!-- Launch Cards --> */
 #launch-cards {
-  margin: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4,calc(25% - 10px));
   grid-template-rows: auto;
-  column-gap: 10px;
-  row-gap: 15px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
   place-content: center;
   grid-auto-flow: row;
+  padding: 20px;
 }
 
 .launch-card {
@@ -134,10 +144,20 @@ p {
 
 .addeventatc {
   left: 20px;
-  top: -20px;
+  top: -10px;
 }
 
 .addeventatc {visibility:hidden;}
+
+/* <!-- About Page --> */
+.about {
+  height: 964px;
+}
+
+.about p {
+  color: #eeeeeeea;
+  text-align: center;
+}
 
 @media only screen and (min-width: 500px) {
   #launch-cards {
@@ -147,6 +167,6 @@ p {
 
 @media only screen and (min-width: 850px) {
   #launch-cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4,calc(25% - 10px));
   }
 }
