@@ -9,20 +9,28 @@ body {
   background-position: start;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 20px;
 }
 
 /* <!-- NavBar --> */
 .navbar {
-  background: #black;
-  position: absolute; 
+  position: fixed; 
   right: 0px;
   border: none;
   top: 0px;
 }
 
+.navbar-default {
+  background-color: black; 
+}
+
+nav .navbar-nav li a{
+  color: #eeeeeeea !important;
+}
+
 .nav-link,
 .navbar-brand {
-  color: #eeeeeeea;
+  /* color: #eeeeeeea; */
   cursor: pointer;
 }
 
