@@ -3,12 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-md">
-      {/* <button className="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button> */}
+    <nav className="navbar navbar-default navbar-fixed-top">
       <div className="collapse navbar-collapse" id="main-navigation">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav navbar-right">
           <li className="nav-item">
             <NavLink className="nav-link" to='/' exact>Home</NavLink>
           </li>
