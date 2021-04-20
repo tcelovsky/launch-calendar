@@ -12,6 +12,11 @@ body {
   padding-top: 20px;
 }
 
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* <!-- NavBar --> */
 .navbar {
   position: fixed; 
@@ -66,6 +71,21 @@ header {
 
 h1 {
   color: #eeeeeeea;
+}
+
+/* <!-- Home --> */
+.home-link {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  margin: 150px auto;
+  width: 30%;
+  vertical-align: middle;
+}
+
+a .home-link h4:hover {
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* <!-- Launch Cards --> */
