@@ -1,6 +1,6 @@
 import '../styles/App.css';
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchLaunches } from '../actions/launchActions';
 import Launches from '../components/Launches';
@@ -21,7 +21,7 @@ class App extends Component {
           <NavBar />
           <Header />
           <Switch>
-            <Route exact path='/' render={() => <Home />} />
+            <Route exact path='/' render={() => <Link to={'/launches'}><Home /></Link>} />
             <Route path='/launches' render={routerProps =>
 	            <Launches {...routerProps} launches={this.props.launches}/>} />
             <Route path='/about' component={About} />
