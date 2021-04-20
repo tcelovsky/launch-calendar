@@ -7,6 +7,7 @@ import Launches from '../components/Launches';
 import NavBar from '../components/NavBar';
 import About from '../components/About';
 import Header from '../components/Header';
+import Home from '../components/Home';
 
 class App extends Component {
 
@@ -20,8 +21,7 @@ class App extends Component {
           <NavBar />
           <Header />
           <Switch>
-            <Route exact path='/' render={routerProps =>
-	            <Launches {...routerProps} launches={this.props.launches}/>} />
+            <Route exact path='/' render={() => <Home />} />
             <Route path='/launches' render={routerProps =>
 	            <Launches {...routerProps} launches={this.props.launches}/>} />
             <Route path='/about' component={About} />
