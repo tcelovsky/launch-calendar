@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div className="home">
-        <p>This website provides a summary of the upcoming rocket launches from the Florida space coast.</p>
+        <p>Click above to view the list of upcoming rocket launches.</p>
     </div>
   );
 };
