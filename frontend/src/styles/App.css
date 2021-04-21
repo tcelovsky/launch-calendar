@@ -88,6 +88,10 @@ a .home-link h4:hover {
   font-weight: bold;
 }
 
+.home-link h3 {
+  font-weight: bold;
+}
+
 /* <!-- Launch Cards --> */
 #launch-cards {
   display: grid;
