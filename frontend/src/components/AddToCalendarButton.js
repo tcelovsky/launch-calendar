@@ -17,10 +17,10 @@ class AddToCalendarButton extends Component {
     }
   }
 
-  concatMission = (str) => {
-    if (str[str.length-1] === ".")
-    str = str.slice(0,-1);
-    return str
+  concatMission = (mission) => {
+    if (mission[mission.length-1] === ".")
+    mission = mission.slice(0,-1);
+    return mission
   }
 
   render() {
