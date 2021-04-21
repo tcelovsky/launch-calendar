@@ -6,15 +6,7 @@ This is a web app that lists out upcoming rocket launches from the Florida space
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Backend:
-  - Rails API
-  - Whenever gem used to schedule a custom Rake task (website scraping)
-- Frontend:
-  - React
-  - Redux
-  - HTML
-  - CSS
-  - Luxon gem used to convert date and time in the appropriate format needed for the Add To Calendar button. 
+Backend was built with [Rails API](https://guides.rubyonrails.org/api_app.html). 
 
 ## Learn More
 
