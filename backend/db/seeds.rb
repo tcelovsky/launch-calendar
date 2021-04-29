@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Launch.destroy_all
 
-scrape = SpacecoastlaunchesScraper.new
+scrape = Scraper.new
 launches = scrape.create_launches_list
 Launch.create_from_collection(launches)
