@@ -5,8 +5,8 @@ import LaunchCard from './LaunchCard';
 class Launches extends Component {
 
     generateLaunchCards = () => {
-        return this.props.launches.map(launch => 
-            // <LaunchCard key={launch.id} launch={launch} />
+        var size = 12;
+        return this.props.launches.slice(0, size).map(launch => 
             <Link key={launch.id} to={`/launches/${launch.id}`}>
                 {<LaunchCard key={launch.id} launch={launch} />}
             </Link>
