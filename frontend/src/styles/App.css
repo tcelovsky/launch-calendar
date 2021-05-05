@@ -196,11 +196,11 @@ p {
   font-size: 14px;
   font-weight: bold;
   padding: 5px 10px;
-  margin: auto;
 }
 
-.container {
-  display: grid;
+#launch-cards .button-holder {
+  text-align: center;
+  width: 400%;
 }
 
 /* <!-- About Page --> */
