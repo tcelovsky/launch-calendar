@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="footer">
-        <p>Thank you for visiting!</p>
+        <p>Thanks for visiting!</p>
     </footer>
   );
 };
