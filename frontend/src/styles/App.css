@@ -91,6 +91,7 @@ footer p {
   margin: 150px auto;
   width: 30%;
   vertical-align: middle;
+  height: 174px;
 }
 
 a .home-link h4:hover {
@@ -189,7 +190,7 @@ p {
 
 /* <!-- About Page --> */
 .about {
-  height: 964px;
+  height: 464px;
 }
 
 .about h5 {
