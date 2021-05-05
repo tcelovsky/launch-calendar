@@ -31,7 +31,11 @@ class Launches extends Component {
         return (
             <div id="launch-cards">
                 {this.generateLaunchCards()}
-                <button className="load-more-button" onClick={this.handleClick}>Load More</button>
+                <div className="container">
+                    <button type="button" className="btn btn-default btn-sm" onClick={this.handleClick}>
+                        <span class="glyphicon" aria-hidden="true"></span> Load More
+                    </button>
+                </div>
             </div>
         )
     }
