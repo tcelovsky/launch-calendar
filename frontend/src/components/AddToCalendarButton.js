@@ -10,7 +10,7 @@ class AddToCalendarButton extends Component {
   }
 
   parseTime = (time) => {
-    if (time == "TBD") {
+    if (time === "TBD") {
       return '8:00 a.m.';
     } else if (time.length > 14) {
       return time.slice(0, 4) + " " + time.slice(10, 14);
