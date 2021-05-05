@@ -24,7 +24,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' render={() => <Link to={'/launches'}><Home /></Link>} />
             <Route path='/launches' render={routerProps =>
-	            <Launches {...routerProps} launches={this.props.launches}/>} />
+	            <Launches {...routerProps} launches={this.props.launches} />} />
             <Route path='/about' component={About} />
           </Switch>
           <Footer />
