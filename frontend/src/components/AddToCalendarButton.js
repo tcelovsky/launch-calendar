@@ -1,3 +1,4 @@
+import '../styles/add-to-calendar-button/css/theme7.css'
 import React, { Component } from 'react';
 import { DateTime } from "luxon";
 
@@ -30,8 +31,8 @@ class AddToCalendarButton extends Component {
     const mission = this.concatMission(this.props.mission)
 
     return (
-        <div title="Add to Calendar" className="addeventatc">
-        Add to Calendar
+        <div title="Add to Calendar" className="addeventatc" data-styling="none">
+            Add to Calendar
             <span className="start">{date} {time}</span>
             <span className="timezone">America/New_York</span>
             <span className="title">{this.props.rocket} Launch</span>
