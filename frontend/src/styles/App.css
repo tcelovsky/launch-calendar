@@ -188,6 +188,21 @@ p {
   font-size: 85%;
 }
 
+/* <!-- Load More Button --> */
+.btn-default {
+  color: black;
+  background-color: #eeeeeeea;
+  border-color: #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: auto;
+}
+
+.container {
+  display: grid;
+}
+
 /* <!-- About Page --> */
 .about {
   height: 464px;
