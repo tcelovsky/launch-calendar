@@ -19,12 +19,12 @@ class Launches extends Component {
     }
 
     handleClick = (e) => {   
-        // e.preventDefault(); 
+        e.preventDefault(); 
 		this.setState(previousState => {      
 			return {        
 				itemsToShow: previousState.itemsToShow + 12     
-			}    
-		})  
+			}  
+		})
 	} 
     
     render() {
@@ -33,7 +33,7 @@ class Launches extends Component {
                 {this.generateLaunchCards()}
                 <div className="button-holder">
                     <button type="button" className="btn btn-default btn-sm" onClick={this.handleClick}>
-                        <span class="glyphicon" aria-hidden="true"></span> Load More
+                        <span className="glyphicon" aria-hidden="true"></span> Load More
                     </button>
                 </div>
             </div>
