@@ -15,7 +15,24 @@
 	  <link rel="stylesheet" href="styles/theme7.css" type="text/css" media="screen" />
 
 	  <!-- AddEvent -->
-	  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js"></script>
+	  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+    <!-- AddEvent Settings -->
+    <script type="text/javascript">
+    window.addeventasync = function(){
+      addeventatc.settings({
+          appleical  : {show:true, text:"Apple Calendar"},
+          google     : {show:true, text:"Google <em>(online)</em>"},
+          office365  : {show:true, text:"Office 365 <em>(online)</em>"},
+          outlook    : {show:true, text:"Outlook"},
+          outlookcom : {show:true, text:"Outlook.com <em>(online)</em>"},
+          yahoo      : {show:true, text:"Yahoo <em>(online)</em>"}
+      });
+    };
+    </script>
+  
+  </head>
+  <body>
 
     <!--
       manifest.json provides metadata used when your web app is installed on a
