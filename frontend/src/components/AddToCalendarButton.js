@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import { DateTime } from "luxon";
 
 class AddToCalendarButton extends Component {
+
+  componentDidMount() {
+    window.addeventatc.refresh(); 
+  }
   
   parseDate = (date) => {
     const dateInMillis = Date.parse(date)
@@ -25,7 +29,7 @@ class AddToCalendarButton extends Component {
     return mission
   }
 
-  render() {
+  render() {    
     const date = this.parseDate(this.props.date)
     const time = this.parseTime(this.props.time)
     const mission = this.concatMission(this.props.mission)
