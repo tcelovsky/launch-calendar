@@ -121,6 +121,8 @@ a .home-link h4:hover {
   transition: transform 1s;
   transform-style: preserve-3d;
   background-color: #eeeeeeea;
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
 .launch-card:hover {
@@ -154,6 +156,7 @@ ul {
   padding: 20px;
   text-align: left;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 span {
@@ -182,15 +185,6 @@ p {
   padding: 20px;
   text-align: left;
   font-size: 85%;
-}
-
-.addeventatc {
-  left: 20px;
-  top: -10px;
-}
-
-.addeventatc {
-  visibility: hidden;
 }
 
 /* <!-- About Page --> */
