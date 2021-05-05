@@ -9,11 +9,12 @@ class AddToCalendarButton extends Component {
   }
 
   parseTime = (time) => {
-    switch(time) {
-        case 'TBD':
-            return '8:00 am';
-        default:
-            return time;
+    if (time == "TBD") {
+      return '8:00 a.m.';
+    } else if (time.length > 14) {
+      return '8:00 a.m.';
+    } else {
+      return time.slice(0, -4)
     }
   }
 
