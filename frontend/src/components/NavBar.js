@@ -9,10 +9,10 @@ const NavBar = () => {
           <li className="nav-item">
             <NavLink className="nav-link" to='/' exact>Home</NavLink>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <NavLink className="nav-link" to='/launches' exact>Launch Calendar</NavLink>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <NavLink className="nav-link" to='/about' exact>About</NavLink>
           </li>
         </ul>
