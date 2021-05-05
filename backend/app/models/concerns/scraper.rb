@@ -29,12 +29,11 @@ class Scraper
 
         doc.css(".missiondata").each do |i|
             time_a = i.children[1].text
-            time_b = i.children.css("u").text
-            if i.children.length > 4
-                time = time_a + time_b + ")"
-            else time = time_a
+            if time_a.strip == "TBD"
+                time = time_a.strip
+            else time = time_a[/\((.*?)\)/, 1]
             end
-            @@times << time.strip
+            @@times << time
         end
 
         doc.css(".missiondata").each do |i|
