@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import LaunchCard from './LaunchCard';
+import LaunchCard from '../components/LaunchCard';
 
 class Launches extends Component {
     constructor(props) {

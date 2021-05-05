@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchLaunches } from '../actions/launchActions';
-import Launches from '../components/Launches';
+import Launches from './Launches';
 import NavBar from '../components/NavBar';
 import About from '../components/About';
 import Header from '../components/Header';
