@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import LaunchCard from '../components/LaunchCard';
 
+const itemsToShow = 12
+
 class Launches extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          itemsToShow: 12
+          itemsToShow: itemsToShow
         };
     }
 
@@ -22,7 +24,7 @@ class Launches extends Component {
         e.preventDefault(); 
 		this.setState(previousState => {      
 			return {        
-				itemsToShow: previousState.itemsToShow + 12     
+				itemsToShow: previousState.itemsToShow + itemsToShow     
 			}  
 		})
 	} 
