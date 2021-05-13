@@ -81,7 +81,6 @@ footer {
 
 footer p {
   color: #eeeeeeea;
-  width: 98%;
   text-align: center;
 }
 
@@ -199,9 +198,9 @@ p {
   padding: 5px 10px;
 }
 
-#launch-cards .button-holder {
+main .button-holder {
   text-align: center;
-  width: 400%;
+  /* width: 100%; */
 }
 
 /* <!-- About Page --> */
