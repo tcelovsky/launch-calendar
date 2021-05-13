@@ -29,14 +29,16 @@ class Launches extends Component {
     
     render() {
         return (
-            <div id="launch-cards">
-                {this.generateLaunchCards()}
+            <main>
+                <div id="launch-cards">
+                    {this.generateLaunchCards()}
+                </div>
                 <div className="button-holder">
                     <button type="button" className="btn btn-default btn-sm" onClick={this.handleClick}>
                         <span className="glyphicon" aria-hidden="true"></span> Load More
                     </button>
                 </div>
-            </div>
+            </main>
         )
     }
 }
