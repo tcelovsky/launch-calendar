@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import LaunchCard from '../components/LaunchCard';
+import LoadMoreButton from '../components/LoadMoreButton';
 
 const itemsToShow = 12
 
@@ -35,11 +36,7 @@ class Launches extends Component {
                 <div id="launch-cards">
                     {this.generateLaunchCards()}
                 </div>
-                <div className="button-holder">
-                    <button type="button" className="btn btn-default btn-sm" onClick={this.handleClick}>
-                        <span className="glyphicon" aria-hidden="true"></span> Load More
-                    </button>
-                </div>
+                <LoadMoreButton handleClick={this.handleClick}/>
             </main>
         )
     }
