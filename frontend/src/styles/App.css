@@ -188,7 +188,7 @@ p {
   font-size: 85%;
 }
 
-/* <!-- Load More Button --> */
+/* <!-- Buttons --> */
 .btn-default {
   color: black;
   background-color: #eeeeeeea;
@@ -200,7 +200,16 @@ p {
 
 main .button-holder {
   text-align: center;
-  /* width: 100%; */
+}
+
+/* <!-- Search Button --> */
+.search-form button {
+  margin: 10px;
+}
+
+/* <!-- Search Field --> */
+.search-form {
+  margin-left: 30px;
 }
 
 /* <!-- About Page --> */
