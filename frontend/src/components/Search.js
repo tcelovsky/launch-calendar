@@ -22,11 +22,15 @@ class Search extends Component {
 		})
     }
 
-    // handleClick = (e) => {
-    //     e.preventDefault();
-    //     // this.search()
-    //     this.props.search(this.state.searchValue)
-    // }
+    handleClick = (e) => {
+        // this.search()
+        this.props.search(e, this.state.searchValue)
+        this.setState(() => {      
+			return {        
+				searchValue: ''     
+			}  
+		})
+    }
 
     // search = () => {
     //     const searchResult = []
@@ -54,8 +58,8 @@ class Search extends Component {
         return (
             <div className="search">
                 <form className="search-form">
-                    <input type="text" onChange={(e) => this.handleChange(e)}></input>
-                    <button type="button" className="btn btn-default btn-sm" onClick={(e) => this.props.search(e, this.state.searchValue)}>Search</button>
+                    <input type="text" value={this.state.searchValue} onChange={(e) => this.handleChange(e)}></input>
+                    <button type="button" className="btn btn-default btn-sm" onClick={(e) => this.handleClick(e)}>Search</button>
                 </form>
             </div>
         )
