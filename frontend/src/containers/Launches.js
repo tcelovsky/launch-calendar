@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import LaunchCard from '../components/LaunchCard';
 import LoadMoreButton from '../components/LoadMoreButton';
 import Search from './Search';
@@ -10,7 +10,7 @@ class Launches extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            launches: this.props.launches,
+            launches: [],
             itemsToShow: itemsToShow
         };
     }
@@ -42,7 +42,7 @@ class Launches extends Component {
     handleSearch = (e, searchValue) => {
         e.preventDefault();
         const searchResult = []
-        this.props.launches.map(launch => {
+        this.props.launches.forEach(launch => {
             if (launch.date.includes(searchValue) || launch.time.includes(searchValue) || launch.site.includes(searchValue) || launch.rocket.includes(searchValue) || launch.mission.includes(searchValue)) {
                 searchResult.push(launch)
             }
@@ -67,7 +67,12 @@ class Launches extends Component {
         } else {
         return (
             <main>
-                <Search search={this.handleSearch}/>
+                {/* <Search search={this.handleSearch}/> */}
+                {/* <Route path='/launches/search' render={routerProps =>
+	                <Search {...routerProps} search={this.handleSearch} />} /> */}
+                <Link to={`/launches/search`}>
+                    {<Search search={this.handleSearch} />}
+                </Link>
                 <div id="launch-cards">
                     {this.generateLaunchCards()}
                 </div>
