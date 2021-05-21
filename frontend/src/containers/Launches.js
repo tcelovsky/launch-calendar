@@ -10,7 +10,7 @@ class Launches extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            launches: [],
+            launches: this.props.launches,
             itemsToShow: itemsToShow
         };
     }
