@@ -55,7 +55,7 @@ class Launches extends Component {
     }
 
     render() {
-        if (this.props.launches.length - this.state.itemsToShow < 12 ) {
+        if (this.props.launches.length - this.state.itemsToShow < 12 || this.state.launches.length - this.state.itemsToShow < 12) {
             return (
                 <main>
                     <Search search={this.handleSearch}/>
