@@ -55,6 +55,16 @@ class Launches extends Component {
     }
 
     render() {
+        if (this.props.launches.length - this.state.itemsToShow < 12 ) {
+            return (
+                <main>
+                    <Search search={this.handleSearch}/>
+                    <div id="launch-cards">
+                        {this.generateLaunchCards()}
+                    </div>
+                </main>
+            )
+        } else {
         return (
             <main>
                 <Search search={this.handleSearch}/>
@@ -63,7 +73,7 @@ class Launches extends Component {
                 </div>
                 <LoadMoreButton handleClick={this.handleLoadMoreButton}/>
             </main>
-        )
+        )}
     }
 }
 
