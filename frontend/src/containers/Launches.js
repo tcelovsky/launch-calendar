@@ -67,12 +67,7 @@ class Launches extends Component {
         } else {
         return (
             <main>
-                {/* <Search search={this.handleSearch}/> */}
-                {/* <Route path='/launches/search' render={routerProps =>
-	                <Search {...routerProps} search={this.handleSearch} />} /> */}
-                <Link to={`/launches/search`}>
-                    {<Search search={this.handleSearch} />}
-                </Link>
+                <Search search={this.handleSearch}/>
                 <div id="launch-cards">
                     {this.generateLaunchCards()}
                 </div>
