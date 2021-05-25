@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000"
+const BASE_URL = "https://launch-calendar.herokuapp.com"
 const LAUNCHES_URL = `${BASE_URL}/launches`
 
 export const fetchLaunches = () => {
