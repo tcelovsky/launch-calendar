@@ -244,13 +244,13 @@ main .button-holder {
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 968px) {
   #launch-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1250px) {
   #launch-cards {
     grid-template-columns: repeat(4, calc(25% - 10px));
   }
