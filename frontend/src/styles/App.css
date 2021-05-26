@@ -232,7 +232,7 @@ main .button-holder {
   }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 499px) {
+@media only screen and (min-width: 300px) and (max-width: 499px) and (orientation: portrait) {
   #launch-cards {
     grid-template-columns: 1fr;
   }
