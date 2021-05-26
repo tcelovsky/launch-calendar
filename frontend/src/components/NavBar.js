@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-xs navbar-default navbar-fixed-top">
       <div className="navbar-collapse">
-        <ul className="navbar-nav navbar-left">
+        <ul className="navbar-nav navbar-right">
           <li className="nav-item">
             <NavLink className="nav-link" to='/' exact>Home</NavLink>
           </li>
