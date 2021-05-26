@@ -47,10 +47,6 @@ nav .navbar-nav li a {
   color: #eeeeeeea;
 }
 
-.navbar-collapse {
-  justify-content: flex-end;
-}
-
 .navbar .active {
   font-weight: bold;
   color: #eeeeeeea;
@@ -222,13 +218,39 @@ main .button-holder {
   text-align: center;
 }
 
+@media (min-width: 468px) {
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+    padding-right: 0;
+    padding-left: 0;
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 499px) {
+  #launch-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media only screen and (min-width: 500px) {
   #launch-cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 900px) {
+  #launch-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
   #launch-cards {
     grid-template-columns: repeat(4, calc(25% - 10px));
   }

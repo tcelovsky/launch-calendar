@@ -27,3 +27,6 @@ backend/storage/*
 backend/config/master.key
 
 NOTES.md
+
+# Local Netlify folder
+.netlify
