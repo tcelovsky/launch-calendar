@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-default navbar-fixed-top">
-      <div className="collapse navbar-collapse" id="main-navigation">
-        <ul className="navbar-nav navbar-right">
+    <nav className="navbar navbar-expand-xs navbar-default navbar-fixed-top">
+      <div className="navbar-collapse">
+        <ul className="navbar-nav navbar-left">
           <li className="nav-item">
             <NavLink className="nav-link" to='/' exact>Home</NavLink>
           </li>
