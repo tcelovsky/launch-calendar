@@ -218,11 +218,11 @@ main .button-holder {
   text-align: center;
 }
 
-@media only screen and (min-width: 1170px) {
+/* @media only screen and (min-width: 1170px) {
   #launch-cards {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 @media only screen and (min-width: 968px) {
   #launch-cards {
