@@ -221,7 +221,7 @@ main .button-holder {
 }
 
 /* <!-- Clear Search Results Button --> */
-.clear-btn button {
+.button-holder .clear-btn button {
   margin-left: 30px;
 }
 
