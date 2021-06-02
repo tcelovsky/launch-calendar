@@ -17,7 +17,7 @@ class Search extends Component {
 		})
     }
 
-    handleClick = (e) => {
+    handleSubmit = (e) => {
         this.props.search(e, this.state.searchValue)
         this.setState(() => {      
 			return {        
@@ -29,9 +29,9 @@ class Search extends Component {
     render() {
         return (
             <div className="search">
-                <form className="search-form">
+                <form className="search-form" onSubmit={(e) => this.handleSubmit(e)}>
                     <input type="text" value={this.state.searchValue} onChange={(e) => this.handleChange(e)}></input>
-                    <button type="button" className="btn btn-default btn-sm" onClick={(e) => this.handleClick(e)}>Search</button>
+                    <button type="submit" className="btn btn-default btn-sm">Search</button>
                 </form>
             </div>
         )
