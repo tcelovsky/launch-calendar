@@ -16,6 +16,16 @@ class Launches extends Component {
         };
     }
 
+    static getDerivedStateFromProps(props, state) {
+        if (props.launches !== state.launches) {
+          return {
+            launches: props.launches
+            };
+        }
+        // Return null to indicate no change to state.
+        return null;
+    }
+
     generateLaunchCards = () => {
         if (this.state.searchResult.length > 0) {
             return this.state.searchResult.slice(0, this.state.itemsToShow).map(launch => 
@@ -24,7 +34,7 @@ class Launches extends Component {
                 </Link>
             )
         } else {
-        return this.props.launches.slice(0, this.state.itemsToShow).map(launch => 
+        return this.state.launches.slice(0, this.state.itemsToShow).map(launch => 
             <Link key={launch.id} to={`/launches/${launch.id}`}>
                 {<LaunchCard key={launch.id} launch={launch} />}
             </Link>
@@ -43,15 +53,23 @@ class Launches extends Component {
     handleSearch = (e, searchValue) => {
         e.preventDefault();
         const searchResult = []
-        this.props.launches.forEach(launch => {
-            if (launch.date.includes(searchValue) || launch.time.includes(searchValue) || launch.site.includes(searchValue) || launch.rocket.includes(searchValue) || launch.mission.includes(searchValue)) {
+        const lowerCaseSearchValue = searchValue.toLowerCase();
+        this.state.launches.forEach(launch => {
+            const date = launch.date.toLowerCase()
+            const time = launch.time.toLowerCase()
+            const site = launch.site.toLowerCase()
+            const rocket = launch.rocket.toLowerCase()
+            const mission = launch.mission.toLowerCase()
+
+            if (date.includes(lowerCaseSearchValue) || time.includes(lowerCaseSearchValue) || site.includes(lowerCaseSearchValue) || rocket.includes(lowerCaseSearchValue) || mission.includes(lowerCaseSearchValue)) {
                 searchResult.push(launch)
             }
         })
+        
         this.setState(() => {      
 			return {        
-				searchResult: searchResult    
-			}  
+				searchResult: searchResult
+			}
 		})
     }
 
@@ -62,8 +80,8 @@ class Launches extends Component {
                 <div id="launch-cards">
                     {this.generateLaunchCards()}
                 </div>
-                <LoadMoreButton handleClick={this.handleLoadMoreButton} launches={this.props.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
-                <LoadedAllResults launches={this.props.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
+                <LoadMoreButton handleClick={this.handleLoadMoreButton} launches={this.state.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
+                <LoadedAllResults launches={this.state.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
             </main>
         )
     }
