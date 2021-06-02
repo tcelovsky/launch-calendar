@@ -54,7 +54,9 @@ class Launches extends Component {
         e.preventDefault();
         const searchResult = []
         const lowerCaseSearchValue = searchValue.toLowerCase();
+
         this.state.launches.forEach(launch => {
+            // Convert each value to lower case.
             const date = launch.date.toLowerCase()
             const time = launch.time.toLowerCase()
             const site = launch.site.toLowerCase()
@@ -65,7 +67,7 @@ class Launches extends Component {
                 searchResult.push(launch)
             }
         })
-        
+
         this.setState(() => {      
 			return {        
 				searchResult: searchResult
