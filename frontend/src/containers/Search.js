@@ -29,7 +29,7 @@ class Search extends Component {
     render() {
         if (this.props.searchResult > 0) {
             return (
-            <div className="button-holder clear-btn">
+            <div className="clear-btn">
                 <button type="button" className="btn btn-default btn-sm" onClick={this.props.clearSearch}>
                     <span className="glyphicon" aria-hidden="true"></span>
                     Clear Search Results
