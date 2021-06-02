@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LaunchCard from '../components/LaunchCard';
+import LoadedAllResults from '../components/LoadedAllResults';
 import LoadMoreButton from '../components/LoadMoreButton';
 import Search from './Search';
 
@@ -65,6 +66,7 @@ class Launches extends Component {
                     {console.log(this.state.searchResult.length)}
                 </div>
                 <LoadMoreButton handleClick={this.handleLoadMoreButton}/>
+                <LoadedAllResults />
             </main>
         )
     }
