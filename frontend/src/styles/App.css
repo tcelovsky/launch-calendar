@@ -220,6 +220,11 @@ main .button-holder {
   margin-left: 30px;
 }
 
+/* <!-- Clear Search Results Button --> */
+.clear-btn button {
+  margin-left: 30px;
+}
+
 /* <!-- About Page --> */
 .about {
   height: 464px;
