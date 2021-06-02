@@ -4,7 +4,9 @@ import LaunchCard from '../components/LaunchCard';
 import LoadedAllResults from '../components/LoadedAllResults';
 import LoadMoreButton from '../components/LoadMoreButton';
 import Search from './Search';
+import ClearResults from '../components/ClearResults';
 
+// Set number of items to display at a time.
 const itemsToShow = 12
 
 class Launches extends Component {
@@ -16,16 +18,6 @@ class Launches extends Component {
         };
     }
 
-    static getDerivedStateFromProps(props, state) {
-        if (props.launches !== state.launches) {
-          return {
-            launches: props.launches
-            };
-        }
-        // Return null to indicate no change to state.
-        return null;
-    }
-
     generateLaunchCards = () => {
         if (this.state.searchResult.length > 0) {
             return this.state.searchResult.slice(0, this.state.itemsToShow).map(launch => 
@@ -34,7 +26,7 @@ class Launches extends Component {
                 </Link>
             )
         } else {
-        return this.state.launches.slice(0, this.state.itemsToShow).map(launch => 
+        return this.props.launches.slice(0, this.state.itemsToShow).map(launch => 
             <Link key={launch.id} to={`/launches/${launch.id}`}>
                 {<LaunchCard key={launch.id} launch={launch} />}
             </Link>
@@ -55,7 +47,7 @@ class Launches extends Component {
         const searchResult = []
         const lowerCaseSearchValue = searchValue.toLowerCase();
 
-        this.state.launches.forEach(launch => {
+        this.props.launches.forEach(launch => {
             // Convert each value to lower case.
             const date = launch.date.toLowerCase()
             const time = launch.time.toLowerCase()
@@ -75,15 +67,24 @@ class Launches extends Component {
 		})
     }
 
+    clearSearch = () => {
+        this.setState(() => {      
+			return {        
+				searchResult: []
+			}
+		})
+    }
+
     render() {
         return (
             <main>
                 <Search search={this.handleSearch}/>
+                <ClearResults searchResult={this.state.searchResult.length}/>
                 <div id="launch-cards">
                     {this.generateLaunchCards()}
                 </div>
-                <LoadMoreButton handleClick={this.handleLoadMoreButton} launches={this.state.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
-                <LoadedAllResults launches={this.state.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
+                <LoadMoreButton handleClick={this.handleLoadMoreButton} launches={this.props.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
+                <LoadedAllResults launches={this.props.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
             </main>
         )
     }
