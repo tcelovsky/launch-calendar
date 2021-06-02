@@ -10,14 +10,14 @@ class Launches extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            launches: [],
+            searchResult: [],
             itemsToShow: itemsToShow
         };
     }
 
     generateLaunchCards = () => {
-        if (this.state.launches.length > 0) {
-            return this.state.launches.slice(0, this.state.itemsToShow).map(launch => 
+        if (this.state.searchResult.length > 0) {
+            return this.state.searchResult.slice(0, this.state.itemsToShow).map(launch => 
                 <Link key={launch.id} to={`/launches/${launch.id}`}>
                     {<LaunchCard key={launch.id} launch={launch} />}
                 </Link>
@@ -49,31 +49,24 @@ class Launches extends Component {
         })
         this.setState(() => {      
 			return {        
-				launches: searchResult    
+				searchResult: searchResult    
 			}  
 		})
     }
 
     render() {
-        if (this.props.launches.length - this.state.itemsToShow < 12 || this.state.launches.length - this.state.itemsToShow < 12) {
-            return (
-                <main>
-                    <Search search={this.handleSearch}/>
-                    <div id="launch-cards">
-                        {this.generateLaunchCards()}
-                    </div>
-                </main>
-            )
-        } else {
         return (
             <main>
                 <Search search={this.handleSearch}/>
                 <div id="launch-cards">
                     {this.generateLaunchCards()}
+                    {console.log(this.props.launches.length)}
+                    {console.log(this.state.itemsToShow)}
+                    {console.log(this.state.searchResult.length)}
                 </div>
                 <LoadMoreButton handleClick={this.handleLoadMoreButton}/>
             </main>
-        )}
+        )
     }
 }
 
