@@ -4,7 +4,6 @@ import LaunchCard from '../components/LaunchCard';
 import LoadedAllResults from '../components/LoadedAllResults';
 import LoadMoreButton from '../components/LoadMoreButton';
 import Search from './Search';
-import ClearResults from '../components/ClearResults';
 
 // Set number of items to display at a time.
 const itemsToShow = 12
@@ -78,8 +77,7 @@ class Launches extends Component {
     render() {
         return (
             <main>
-                <Search search={this.handleSearch}/>
-                <ClearResults searchResult={this.state.searchResult.length}/>
+                <Search search={this.handleSearch} clearSearch={this.clearSearch} searchResult={this.state.searchResult.length}/>
                 <div id="launch-cards">
                     {this.generateLaunchCards()}
                 </div>
