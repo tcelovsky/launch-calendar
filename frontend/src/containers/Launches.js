@@ -61,14 +61,41 @@ class Launches extends Component {
                 <Search search={this.handleSearch}/>
                 <div id="launch-cards">
                     {this.generateLaunchCards()}
-                    {console.log(this.props.launches.length)}
-                    {console.log(this.state.itemsToShow)}
-                    {console.log(this.state.searchResult.length)}
                 </div>
                 <LoadMoreButton handleClick={this.handleLoadMoreButton}/>
-                <LoadedAllResults />
+                <LoadedAllResults launches={this.props.launches.length} itemsToShow={this.state.itemsToShow} searchResult={this.state.searchResult.length} defaultItemsToShow={itemsToShow}/>
             </main>
         )
+
+        // if ((this.props.launches.length - this.state.itemsToShow) < itemsToShow || (this.state.searchResult.length - this.state.itemsToShow) < itemsToShow) {
+        //     return (
+        //         <main>
+        //             <Search search={this.handleSearch}/>
+        //             <div id="launch-cards">
+        //                 {this.generateLaunchCards()}
+        //                 {console.log(this.props.launches.length)}
+        //                 {console.log(this.state.itemsToShow)}
+        //                 {console.log(this.state.searchResult.length)}
+        //             </div>
+        //             <LoadMoreButton handleClick={this.handleLoadMoreButton}/>
+        //             <LoadedAllResults />
+        //         </main>
+        //     )
+        // } else {
+        //     return (
+        //     <main>
+        //         <Search search={this.handleSearch}/>
+        //         <div id="launch-cards">
+        //             {this.generateLaunchCards()}
+        //             {console.log(this.props.launches.length)}
+        //             {console.log(this.state.itemsToShow)}
+        //             {console.log(this.state.searchResult.length)}
+        //         </div>
+        //         <LoadMoreButton handleClick={this.handleLoadMoreButton}/>
+        //     </main>
+        //     )
+        // }
+        
     }
 }
 
