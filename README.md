@@ -13,3 +13,7 @@ Backend was built with [Rails API](https://guides.rubyonrails.org/api_app.html).
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Running the App
+
+Navigate to the backend directory (`cd backend`) and start Rails server by entering `rails s` in your terminal. Navigate to the frontend directory (`cd frontend`) and start the server by entering `npm start` in your terminal. A custom Rake command `rake db:dcms` will drop, create, migrate and seed the database with seed data.
