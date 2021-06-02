@@ -80,6 +80,18 @@ footer p {
   text-align: center;
 }
 
+/* <!-- Loaded All Results Message --> */
+.message {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.message p {
+  color: #eeeeeeea;
+  text-align: center;
+}
+
 /* <!-- Home --> */
 .home-link {
   color: black;
